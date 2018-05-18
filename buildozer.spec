@@ -36,7 +36,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = kivy,android,sqlite3
+requirements = android,sdl2,pyjnius,kivy==master
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -56,6 +56,7 @@ orientation = portrait
 
 # (list) List of service to declare
 #services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
+services = provostservice:services/provostservice.py
 
 #
 # OSX Specific
@@ -65,10 +66,10 @@ orientation = portrait
 # author = © Copyright Info
 
 # change the major version of python used by the app
-osx.python_version = 3
+#osx.python_version = 3
 
 # Kivy version to use
-osx.kivy_version = 1.9.1
+#osx.kivy_version = 1.9.1
 
 #
 # Android specific
@@ -85,7 +86,7 @@ fullscreen = 0
 #android.presplash_color = #FFFFFF
 
 # (list) Permissions
-#android.permissions = INTERNET
+android.permissions = INTERNET
 
 # (int) Android API to use
 #android.api = 19
@@ -103,7 +104,7 @@ fullscreen = 0
 #android.private_storage = True
 
 # (str) Android NDK directory (if empty, it will be automatically downloaded.)
-#android.ndk_path =
+#android.ndk_path = /opt/crystax-ndk-10.3.2
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
 #android.sdk_path =
@@ -190,7 +191,7 @@ android.arch = armeabi-v7a
 #
 
 # (str) python-for-android git clone directory (if empty, it will be automatically cloned from github)
-#p4a.source_dir =
+p4a.source_dir = /python-for-android
 
 # (str) The directory in which python-for-android should look for your own build recipes (if any)
 #p4a.local_recipes =

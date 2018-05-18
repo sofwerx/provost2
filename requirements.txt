@@ -1,5 +1,4 @@
-buildozer==0.34
-Cython==0.21
+Cython==0.25
 pexpect==4.5.0
 ptyprocess==0.5.2
 virtualenv==15.2.0
